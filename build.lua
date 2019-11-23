@@ -9,6 +9,8 @@ sourcefiles={"*.dtx"}
 scriptfiles={"*.pl"}
 installfiles={"*.sty","*.def","*.pl"}
 
+testfiledir= "disabled" -- issues with reproducible attachments
+
 packtdszip  = true
 
 packtdszip  = true
