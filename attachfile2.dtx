@@ -1,7 +1,7 @@
 % \iffalse meta-comment
 %
 % File: attachfile2.dtx
-% Version: 2019/11/24 v2.10
+% Version: 2019/11/26 v2.11
 % Info: Attach files into PDF
 %
 % Copyright (C)
@@ -27,9 +27,9 @@
 %
 % This work consists of the main source file attachfile2.dtx
 % and the derived files
-%    attachfile2.sty, attachfile2.pdf, attachfile2.ins, attachfile2.drv,
+%    attachfile2.sty, attachfile2.pdf,
 %    atfi-dvips.def, atfi-pdftex.def, atfi-dvipdfmx.def, atfi-luatex.def
-%    pdfatfi.pl.
+%    pdfatfi.pl pdfatfi.1.
 %
 % Distribution:
 %    CTAN:macros/latex/contrib/attachfile2/attachfile2.dtx
@@ -69,6 +69,7 @@
 %    TDS:tex/latex/attachfile2/atfi-luatex.def
 %    TDS:scripts/attachfile2/pdfatfi.pl (exec flag)
 %    TDS:doc/latex/attachfile2/attachfile2.pdf
+%    TDS:doc/man/man1/pdfatfi.1
 %    TDS:source/latex/attachfile2/attachfile2.dtx
 %
 %<*ignore>
@@ -86,7 +87,7 @@
 \input docstrip.tex
 \Msg{************************************************************************}
 \Msg{* Installation}
-\Msg{* Package: attachfile2 2019/11/24 v2.10 Attach files into PDF (HO)}
+\Msg{* Package: attachfile2 2019/11/26 v2.11 Attach files into PDF (HO)}
 \Msg{************************************************************************}
 
 \keepsilent
@@ -98,7 +99,7 @@
 This is a generated file.
 
 Project: attachfile2
-Version: 2019/11/24 v2.10
+Version: 2019/11/26 v2.11
 
 Copyright (C)
    2005-2010, 2012  Heiko Oberdiek
@@ -123,9 +124,9 @@ https://github.com/ho-tex/attachfile2/issues
 
 This work consists of the main source file attachfile2.dtx
 and the derived files
-   attachfile2.sty, attachfile2.pdf, attachfile2.ins, attachfile2.drv,
+   attachfile2.sty, attachfile2.pdf,
    atfi-dvips.def, atfi-pdftex.def, atfi-dvipdfmx.def, atfi-luatex.def
-   pdfatfi.pl.
+   pdfatfi.pl, pdfatfi.1.
 
 \endpreamble
 \let\MetaPrefix\DoubleperCent
@@ -141,6 +142,8 @@ and the derived files
   \file{atfi-dvipdfmx.def}{\from{attachfile2.dtx}{dvipdfmx}}%
   \nopreamble
   \nopostamble
+  \usedir{doc/man/man1/}%
+  \file{pdfatfi.1}{\from{attachfile2.dtx}{pdfatfiman}}%
   \usedir{scripts/attachfile2}%
   \csname execfiletrue\endcsname
   \file{pdfatfi.pl}{\from{attachfile2.dtx}{pdfatfi}}%
@@ -177,7 +180,7 @@ and the derived files
 %<*driver>
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesFile{attachfile2.drv}%
-  [2019/11/24 v2.10 Attach files into PDF (HO)]%
+  [2019/11/26 v2.11 Attach files into PDF (HO)]%
 \documentclass{ltxdoc}
 \usepackage{holtxdoc}[2011/11/22]
 \begin{document}
@@ -206,7 +209,7 @@ and the derived files
 % \GetFileInfo{attachfile2.drv}
 %
 % \title{The \xpackage{attachfile2} package}
-% \date{2019/11/24 v2.10}
+% \date{2019/11/26 v2.11}
 % \author{Heiko Oberdiek\thanks
 % {Please report any issues at \url{https://github.com/ho-tex/attachfile2/issues}}}
 %
@@ -434,7 +437,7 @@ and the derived files
 %<*package>
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{attachfile2}%
-  [2019/11/24 v2.10 Attach files into PDF (HO)]%
+  [2019/11/26 v2.11 Attach files into PDF (HO)]%
 %    \end{macrocode}
 %
 % \subsubsection{Loading of packages}
@@ -1623,7 +1626,7 @@ and the derived files
 %<*pdftex>
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesFile{atfi-pdftex.def}%
-  [2019/11/24 v2.10 attachfile2 driver for pdfTeX (HO)]%
+  [2019/11/26 v2.11 attachfile2 driver for pdfTeX (HO)]%
 %    \end{macrocode}
 %
 % \paragraph{Macros for graphics data}
@@ -1807,7 +1810,7 @@ and the derived files
 %<*luatex>
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesFile{atfi-luatex.def}%
-  [2019/11/24 v2.10 attachfile2 driver for luaTeX (HO)]%
+  [2019/11/26 v2.11 attachfile2 driver for luaTeX (HO)]%
 \protected\def\atfi@literal        {\pdfextension literal}
 \def\atfi@GSAVE{q }
 \def\atfi@GRESTORE{Q }
@@ -1941,7 +1944,7 @@ and the derived files
 %<*dvips>
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesFile{atfi-dvips.def}%
-  [2019/11/24 v2.10 attachfile2 driver for dvips (HO)]%
+  [2019/11/26 v2.11 attachfile2 driver for dvips (HO)]%
 %    \end{macrocode}
 %
 % \paragraph{Macros for graphics data}
@@ -2516,7 +2519,7 @@ and the derived files
 %<*dvipdfmx>
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesFile{atfi-dvipdfmx.def}%
-  [2019/11/24 v2.10 attachfile2 driver for dvipdfmx/XeTeX (HO)]%
+  [2019/11/26 v2.11 attachfile2 driver for dvipdfmx/XeTeX (HO)]%
 %    \end{macrocode}
 %
 % \paragraph{Macros for graphics data}
@@ -2788,7 +2791,7 @@ my $prj         = 'pdfatfi';
 my $file        = "$prj.pl";
 my $program     = uc($&) if $file =~ /^\w+/;
 my $version     = "2.9";
-my $date        = "2019/11/24";
+my $date        = "2019/11/26";
 my $author      = "Heiko Oberdiek";
 my $copyright   = "Copyright (c) 2005-2010, 2012 by $author.";
 #
@@ -2978,6 +2981,60 @@ __END__
 %</pdfatfi>
 %    \end{macrocode}
 %
+%    \begin{macrocode}
+%<*pdfatfi>
+.TH pdfatfi 1 "2019-11-24"
+.SH NAME
+pdfatfi \- Help program for the LaTeX package attachfile2.
+.SH SYNOPSIS
+pdfatfi <command> [<options>] <file[.atfi]>]
+.SH DESCRIPTION
+Helper program for the LaTeX package attachfile2.
+
+This package also tries to get and add meta information data,
+such as file size, file date, checksum, ....
+
+The script pdfatfi.pl is provided for use with old versions of
+pdfTeX and XeTeX that do not provide access
+to  file metadata.
+
+The use of the Perl script is not mandatory. This data can be shown
+by PDF viewers, but they are not a requirement of the PDF specification.
+
+Package attachfile2 and the Perl script communicate
+via an auxiliary file with file extension .atfi. The script
+is used between two LaTeX runs and updates the auxiliary file.
+
+.nf
+latex test
+pdfatfi test
+latex test
+dvips test
+ps2pdf test.ps test.pdf
+.fi
+
+.SH OPTIONS
+Various options are supported
+.IP --help   
+Show help text.
+.IP --version
+Print version number
+.IP --(no)quiet
+Suppress/don't suppress messages
+.IP --(no)verbose
+Verbose (not verbose) printing.
+.IP --(no)debug
+Debug infomation printed (not printed)
+.SH BUGS
+Please log issues on the GitHub homepage:
+.br
+https://github.com/ho-tex/attachfile2/issues.
+.SH AUTHOR
+Heiko Oberdiek (ho-tex@tug.org)
+.SH SEE ALSO
+See attachfile2.pdf for more details.
+%</pdfatfi>
+%    \end{macrocode}
 %
 % \section{Installation}
 %
@@ -3287,6 +3344,10 @@ __END__
 %     Address perl warning \verb|Scalar value @s[7] better written as $s[7] at pdfatfi.pl line 147|
 %   \item
 %     use \CTANpkg{iftex} not \CTANpkg{ifpdf}, \CTANpkg{ifxetex}, \CTANpkg{ifluatex}.
+%   \end{Version}
+%   \begin{Version}{2019/11/26 v2.11}
+%   \item
+%     Add man file for \verb|pdfatfi|.
 %   \end{Version}
 % \end{History}
 %
