@@ -778,6 +778,11 @@ and the derived files
 \DeclareBoolOption[true]{zoom}
 %    \end{macrocode}
 %
+%    Option \xoption{lock}.
+%    \begin{macrocode}
+\DeclareBoolOption[true]{lock}
+%    \end{macrocode}
+%
 %    Option \xoption{appearance}.
 %    \begin{macrocode}
 \DeclareBoolOption[true]{appearance}
@@ -869,6 +874,7 @@ and the derived files
   timezone,%
   ucfilespec,%
   zoom,%
+  lock,%
 }
 %    \end{macrocode}
 %
@@ -1520,6 +1526,9 @@ and the derived files
   \ifatfi@zoom
   \else
     \addtocounter{atfi@flags}{8}%
+  \fi%
+  \ifatfi@lock
+  	\addtocounter{atfi@flags}{128}%
   \fi%
 }
 %    \end{macrocode}
