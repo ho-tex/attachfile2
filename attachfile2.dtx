@@ -778,9 +778,9 @@ and the derived files
 \DeclareBoolOption[true]{zoom}
 %    \end{macrocode}
 %
-%    Option \xoption{lock}.
+%    Option \xoption{locked}.
 %    \begin{macrocode}
-\DeclareBoolOption[true]{lock}
+\DeclareBoolOption[true]{locked}
 %    \end{macrocode}
 %
 %    Option \xoption{appearance}.
@@ -874,7 +874,7 @@ and the derived files
   timezone,%
   ucfilespec,%
   zoom,%
-  lock,%
+  locked,%
 }
 %    \end{macrocode}
 %
@@ -1527,7 +1527,7 @@ and the derived files
   \else
     \addtocounter{atfi@flags}{8}%
   \fi%
-  \ifatfi@lock
+  \ifatfi@locked
   	\addtocounter{atfi@flags}{128}%
   \fi%
 }
@@ -3009,7 +3009,7 @@ ps2pdf test.ps test.pdf
 
 .SH OPTIONS
 Various options are supported
-.IP --help   
+.IP --help
 Show help text.
 .IP --version
 Print version number
@@ -3333,7 +3333,7 @@ See attachfile2.pdf for more details.
 %   \end{Version}
 %   \begin{Version}{2019/11/24 v2.10}
 %   \item
-%     Fix perl header comment 
+%     Fix perl header comment
 %   \item
 %     Address perl warning \verb|Scalar value @s[7] better written as $s[7] at pdfatfi.pl line 147|
 %   \item
