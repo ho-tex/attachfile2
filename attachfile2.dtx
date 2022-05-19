@@ -307,7 +307,7 @@ and the derived files
 %          the generation of the auxiliary file \xfile{.atfi}.
 %    \item New option \xoption{ucfilespec} for file names with
 %          characters outside ASCII (PDF 1.7).
-%    \item New option \xoption{locked} to set the \texttt{Locked} flag.      
+%    \item New option \xoption{locked} to set the \texttt{Locked} flag.
 %    \end{itemize}
 %
 % \subsubsection{Option \xoption{color}}
@@ -2685,7 +2685,7 @@ and the derived files
         \let\atfi@temp\Hy@Warning
         \let\Hy@Warning\ltx@gobble
       \fi
-      \hypersetup{unicode=false}%
+      \Hy@unicodefalse%
       \ifxetex
         \let\Hy@Warning\atfi@temp
       \fi
