@@ -1466,9 +1466,11 @@ and the derived files
 %
 %    \begin{macro}{\atfi@set@appearance@icon}
 %    \begin{macrocode}
+\providecommand\SuspendTagging[1]{}
 \def\atfi@set@appearance@icon{%
   \ltx@IfUndefined{atfi@appobj@\atfi@icon@icon}{%
     \savebox{\atfi@appearancebox}{%
+      \SuspendTagging{attachfile2}%
       \@nameuse{atfi@acro\atfi@icon@icon}%
     }%
     \expandafter
